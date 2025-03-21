@@ -1,0 +1,67 @@
+1. install react router
+   npm install react-router-dom@6
+
+2. before we structering our routes in "routes" folder. we wrap our entire <App/> with 
+        <BrowserRouter> <App /> </BrowserRouter>
+
+3. install talwindcss (must use version 3)
+      npm install -D tailwindcss@3
+
+
+
+4. API key :- 41e29102df7f52fff038f7af76524d2f
+
+Base URL :- https://api.themoviedb.org/3
+
+
+
+Detail/Individual : 
+https://api.themoviedb.org/3/movie/{movie_id}?api_key=41e29102df7f52fff038f7af76524d2f
+
+
+Now Playing:
+https://api.themoviedb.org/3/movie/now_playing?api_key=41e29102df7f52fff038f7af76524d2f
+
+
+Popular:
+https://api.themoviedb.org/3/movie/popular?api_key=41e29102df7f52fff038f7af76524d2f
+
+Top rated:
+https://api.themoviedb.org/3/movie/top_rated?api_key=41e29102df7f52fff038f7af76524d2f
+
+
+Up coming:
+https://api.themoviedb.org/3/movie/upcoming?api_key=41e29102df7f52fff038f7af76524d2f
+
+
+search:
+ https://api.themoviedb.org/3/search/movie?query={movie_name}&api_key=41e29102df7f52fff038f7af76524d2f
+
+
+
+5. Instead of we show the api_key outside like this ->https://api.themoviedb.org/3/${apiPath}?api_key=41e29102df7f52fff038f7af76524d2f`
+     
+     1. simply create .env file on your root directory (whole project folder lo..)
+
+     2. write REACT_APP + your variablename(API_KEY) inside of .env file
+             
+             REACT_APP_API_KEY = 41e29102df7f52fff038f7af76524d2f (not just a apikey u want to store any type of information in .env file)
+
+     3. To access -> const API_KEY = process.env.REACT_APP_API_KEY;
+   
+    #vite
+      2.  write  VITE + your variablename inside of .env file
+                 VITE_API_KEY = 41e29102df7f52fff038f7af76524d2f
+
+      3. To access -> const API_KEY = import.meta.env.VITE_API_KEY;
+
+
+6. In folder structue there is a ".gitignore" file is there.
+     1. open folder and mention .env (we ignore the .env file bcz we can't push it anywhere)
+
+
+7. scroll to Top wrapper
+   1. utilize useLocation()
+       everytime we change our link we are going to scrollToTop
+        nuvu page marekoddhi bottomloki vachestundi so header kanipistaledhu
+        so react will scrollToTop whenever u change the page or jump into new page
